@@ -1,0 +1,40 @@
+.container{
+    width: 100%;
+    margin: 120px auto;
+    background-color: orange;
+}
+
+.container > div{
+    margin-bottom: 30px;
+}
+
+.titulo{
+    height: 92px; 
+    width: 100%;
+    background-color: red;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.prato{
+    height: 260px; 
+    background-color: gray;
+}
+.bebida{
+    height: 260px; 
+    background-color: gray;
+}
+.sobremesa{
+    height: 260px; 
+    background-color: gray;
+}
+
+.finalizar{
+    height: 92px; 
+    width: 100%;
+    background-color: green;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
