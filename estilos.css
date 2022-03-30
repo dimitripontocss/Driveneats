@@ -1,40 +1,144 @@
-.container{
-    width: 100%;
-    margin: 120px auto;
-    background-color: orange;
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+*{
+   box-sizing: border-box; 
 }
+
+body{
+    background-color: #e5e5e5;
+}
+
+/* Barra de titulo */
+
+.titulo{
+    height: 92px; 
+    width: 600px;
+    background-color: #CF2B2B;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+}
+
+.titulo h1 {
+    font-family: 'Righteous', cursive;
+    font-size: 44px;
+    color: #ffffff;
+    margin-left: 21px;
+}
+
+.titulo h3{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    margin-left: 21px;
+}
+
+/* Barra de titulo */
+
+/* Conteudo da pagina */
+
+.container{
+    max-width: 600px;
+    margin: 110px 0;
+    
+   
+}
+
 
 .container > div{
     margin-bottom: 30px;
 }
 
-.titulo{
-    height: 92px; 
-    width: 100%;
-    background-color: red;
-    position: fixed;
-    left: 0;
-    top: 0;
+.container h2{
+    font-family: 'Righteous', cursive;
+    font-size: 26px;
+    color: #333333;
+    margin-left: 19px;
+    margin-bottom: 17px;
 }
 
-.prato{
-    height: 260px; 
-    background-color: gray;
+.opcoes{
+    display: flex;
+    overflow-x: scroll;
+    
+        
 }
-.bebida{
-    height: 260px; 
-    background-color: gray;
+
+.opcoes > div{
+    min-width: 172px;
+    height: 216px;
+    background-color: #ffffff;
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 9px;
 }
-.sobremesa{
-    height: 260px; 
-    background-color: gray;
+
+.opcoes img{
+    width: 144px;
+    height: 87px;
+    margin: 18px 14px 8px 14px;
 }
+
+.opcoes h4{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 9px;
+    margin-left: 15px;
+}
+
+.descricao{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: #a6a6a6;
+    margin-bottom: 9px;
+    margin-left: 15px;
+}
+
+.preco{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    margin-left: 15px;
+}
+/* Conteudo da pagina */
+
+/* Barra de finalizar o pedido */
 
 .finalizar{
     height: 92px; 
     width: 100%;
-    background-color: green;
+    background-color: #ffffff;
     position: fixed;
     bottom: 0;
-    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.finalizar > div{
+    width: 88%;
+    height: 61px;
+    border-radius: 50px;
+    background-color: #CBCBCB;
+    align-items: center;
+   
+}
+
+.finalizar p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 13px;
+}
+
+/* Barra de finalizar o pedido */
