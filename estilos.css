@@ -74,12 +74,13 @@ body{
     align-items: flex-start;
     border-radius: 9px;
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    border: 5px solid #ffffff;
 }
 
 .opcoes img{
     width: 144px;
     height: 87px;
-    margin: 18px 14px 8px 14px;
+    margin: 18px 14px 8px 10px;
 }
 
 .opcoes h4{
@@ -88,7 +89,7 @@ body{
     font-weight: 700;
     color: #333333;
     margin-bottom: 9px;
-    margin-left: 15px;
+    margin-left: 10px;
 }
 
 .descricao{
@@ -97,7 +98,7 @@ body{
     font-weight: 300;
     color: #a6a6a6;
     margin-bottom: 9px;
-    margin-left: 15px;
+    margin-left: 10px;
 }
 
 .preco{
@@ -105,7 +106,7 @@ body{
     font-size: 16px;
     font-weight: 400;
     color: #000000;
-    margin-left: 15px;
+    margin-left: 10px;
 }
 /* Conteudo da pagina */
 
