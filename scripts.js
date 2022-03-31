@@ -184,9 +184,10 @@ function selecionarAgua(){
 
    let teste;
 
-  
+   let nome = prompt("Qual seu nome?");
+   let endereco = prompt("Qual o endereço?");
 
-   teste = "Olá, gostaria de fazer o pedido: \n" +"- Prato: "+ nomePrato + "\n- Bebida: "+ nomeBebida + "\n- Sobremesa: "+nomeSobremesa + "\nTotal: R$ "+ contaFormatada;
+   teste = "Olá, gostaria de fazer o pedido: \n" +"- Prato: "+ nomePrato + "\n- Bebida: "+ nomeBebida + "\n- Sobremesa: "+nomeSobremesa + "\nTotal: R$ "+ contaFormatada+ "\nNome: "+nome+"\nEndereço: "+endereco;
    
    alert(teste);
 
