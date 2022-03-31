@@ -1,5 +1,6 @@
 
 let prato, bebida, sobremesa;
+let nomePrato, nomeBebida, nomeSobremesa;
 
 
 
@@ -130,3 +131,71 @@ function selecionarAgua(){
     }
 
  }
+
+ function conta(){
+
+   let total = 0;
+
+   if(prato === "Frango"){
+      total = total + 18.90;
+      nomePrato = "Frango Yin Yang";
+   }
+   if(prato === "Carne"){
+      total = total + 19.90;
+      nomePrato = "Carne Qualitè";
+   }
+   if(prato === "Peixe"){
+      total = total + 20;
+      nomePrato = "Peixe Top";
+   }
+   if(prato === "Veg"){
+      total = total + 17.90;
+      nomePrato = "Vegetariano";
+   }
+
+   if(bebida === "Coca"){
+      total = total + 4.9;
+      nomeBebida = "Coquinha Gelada";
+   }
+   if(bebida === "Agua"){
+      total = total + 2.9;
+      nomeBebida = "Água Mineral";
+   }
+   if(bebida === "Refresco"){
+      total = total + 3.9;
+      nomeBebida = "Refresco";
+   }
+
+   if(sobremesa === "Pudim"){
+      total = total+ 7.0;
+      nomeSobremesa = "Pudim";
+   }
+   if(sobremesa === "Brigadeiro"){
+      total = total+ 10.0;
+      nomeSobremesa = "Brigadeiro";
+   }
+   if(sobremesa === "Maca"){
+      total = total;
+      nomeSobremesa = "Maça";
+   }
+
+   const contaFormatada = total.toFixed(2);
+  
+
+   let teste;
+
+  
+
+   teste = "Olá, gostaria de fazer o pedido: \n" +"- Prato: "+ nomePrato + "\n- Bebida: "+ nomeBebida + "\n- Sobremesa: "+nomeSobremesa + "\nTotal: R$ "+ contaFormatada;
+   
+   alert(teste);
+
+   
+      let UrlPronto = encodeURIComponent(teste);
+      
+      window.location.href = "https://wa.me/5532984512533?text="+UrlPronto;
+      
+   
+ }
+ 
+ 
