@@ -139,13 +139,29 @@
     </div>
 
     
-    <div id="finalizar" onclick="conta()">
+    <div class="finalizar escondido" onclick="confirmar()">
        
       
         <div><p>Fechar o pedido</p></div>
     
     </div>
-        
+        <div class="teladeconfirm escondido">
+            <div>
+                <h3>Confirme seu pedido</h3>
+            </div>
+            <div id="resumo">
+                <div><p class="value-dish"></p>
+                    <p class="pricedish"></p></div>
+                <div><p class="value-drink"> </p>
+                    <p class="pricedrink"></p></div>
+                <div><p class="value-dessert"></p>
+                    <p class="pricedessert"></p></div>
+                <div><p>Total</p>
+                    <p class="pay"></p></div>
+            </div>
+            <div id="fim" onclick="conta()"><h4>Tudo certo, pode pedir!</h4></div>
+            <div id="cancel" onclick="reload()"><p>Cancelar</p></div>
+        </div>
 
     <script src="scripts.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

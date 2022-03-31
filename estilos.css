@@ -2,6 +2,8 @@
 
 *{
    box-sizing: border-box; 
+   -ms-overflow-style: none;
+   scrollbar-width: none;
 }
 
 *:link{
@@ -11,6 +13,11 @@
 body{
     background-color: #e5e5e5;
 }
+
+*::-webkit-scrollbar{
+    display: none;
+}
+
 
 /* Barra de titulo */
 
@@ -148,7 +155,7 @@ body{
     margin-top: 13px;
 }
 
-#finalizar{
+.finalizar{
     height: 92px; 
     width: 100%;
     background-color: #ffffff;
@@ -158,19 +165,19 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    display: none;
+    
 }
 
-#finalizar > div{
+.finalizar > div{
     width: 88%;
     height: 61px;
     border-radius: 50px;
-    background-color: rgba(50, 183, 47, 1);;
+    background-color: #32B72F;
     align-items: center;
    
 }
 
-#finalizar p{
+.finalizar p{
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     color: #ffffff;
@@ -178,6 +185,9 @@ body{
     margin-top: 20px;
 }
 
+.escondido{
+    display: none;
+}
 
 /* Barra de finalizar o pedido */
 
@@ -274,3 +284,58 @@ body{
 
 
 /* Icones de verificado */
+
+/* Caixa de confirmação */
+
+.teladeconfirm{
+    width: 91%;
+    height: 330px;
+    position: fixed;
+    left: 18px;
+    top: 200px;
+    background-color: rgba(80, 208, 116, 1);
+    border-radius: 9px;
+    display: flex;
+    font-size: 20px;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    flex-direction: column;
+    align-items: center;
+}
+ .teladeconfirm > :first-child{
+     margin-top: 20px;
+     margin-bottom: 25px;
+ }
+
+ .teladeconfirm h3{
+     font-weight: 700;
+ }
+ .escondido{
+    display: none;
+}
+ #resumo{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+#resumo > div{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+ #fim{
+    width: 87%;
+    height: 52px;
+    background-color: #ffffff;
+    border-radius: 100px;
+    color: #50D074;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-bottom: 20px;
+ }

@@ -127,60 +127,165 @@ function selecionarAgua(){
 
  function fechar(){
     if( (prato === "Frango" || prato === "Carne" || prato === "Peixe" || prato === "Veg") && (bebida ==="Coca" || bebida === "Agua" || bebida === "Refresco") && (sobremesa === "Pudim" || sobremesa === "Brigadeiro" || sobremesa === "Maca")){
-       document.getElementById("finalizar").style.display = "flex";
+      const elemento = document.querySelector(".finalizar");
+      elemento.classList.remove("escondido");
     }
 
  }
 
- function conta(){
 
-   let total = 0;
+
+
+ function confirmar(){
+   const elemento = document.querySelector(".teladeconfirm");
+   elemento.classList.remove("escondido");
+
+    let total = 0;
+    let precoPrato = 0;
+    let precoBebida = 0;
+    let precoSobremesa = 0;
 
    if(prato === "Frango"){
       total = total + 18.90;
       nomePrato = "Frango Yin Yang";
+      precoPrato = 18.90;
    }
    if(prato === "Carne"){
       total = total + 19.90;
       nomePrato = "Carne Qualitè";
+      precoPrato = 19.90;
    }
    if(prato === "Peixe"){
       total = total + 20;
       nomePrato = "Peixe Top";
+      precoPrato = 20;
    }
    if(prato === "Veg"){
       total = total + 17.90;
       nomePrato = "Vegetariano";
+      precoPrato = 17.90;
    }
 
    if(bebida === "Coca"){
       total = total + 4.9;
       nomeBebida = "Coquinha Gelada";
+      precoBebida = 4.90;
    }
    if(bebida === "Agua"){
       total = total + 2.9;
       nomeBebida = "Água Mineral";
+      precoBebida = 2.90;
    }
    if(bebida === "Refresco"){
       total = total + 3.9;
       nomeBebida = "Refresco";
+      precoBebida = 3.90;
    }
 
    if(sobremesa === "Pudim"){
       total = total+ 7.0;
       nomeSobremesa = "Pudim";
+      precoSobremesa = 7.0;
    }
    if(sobremesa === "Brigadeiro"){
       total = total+ 10.0;
       nomeSobremesa = "Brigadeiro";
+      precoSobremesa = 10.0;
    }
    if(sobremesa === "Maca"){
       total = total;
       nomeSobremesa = "Maça";
+      precoSobremesa = 0.0;
+   }
+
+
+   
+   let valueDish = document.querySelector(".value-dish");
+   let pricedish = document.querySelector(".pricedish");
+   let valueDrink = document.querySelector(".value-drink");
+   let pricedrink = document.querySelector(".pricedrink");
+   let valueDessert = document.querySelector(".value-dessert");
+   let pricedessert = document.querySelector(".pricedessert");
+   let pay = document.querySelector(".pay");
+
+
+
+   valueDish.innerHTML = nomePrato;
+   pricedish.innerHTML = ("R$ " + parseFloat(precoPrato).toFixed(2).replace(".",","));;
+
+   valueDrink.innerHTML = nomeBebida;
+   pricedrink.innerHTML = ("R$ " + parseFloat(precoBebida).toFixed(2).replace(".",","));;
+
+   valueDessert.innerHTML = nomeSobremesa;
+   pricedessert.innerHTML = (" R$ " + (parseFloat(precoSobremesa)).toFixed(2).replace(".",","));
+  
+   pay.innerHTML = (" R$ " + (parseFloat(precoBebida) + parseFloat(precoPrato) + parseFloat(precoSobremesa)).toFixed(2).replace(".",","));
+
+  
+ }
+
+ function conta(){
+
+   let total = 0;
+    let precoPrato = 0;
+    let precoBebida = 0;
+    let precoSobremesa = 0;
+    
+   if(prato === "Frango"){
+      total = total + 18.90;
+      nomePrato = "Frango Yin Yang";
+      precoPrato = 18.90;
+   }
+   if(prato === "Carne"){
+      total = total + 19.90;
+      nomePrato = "Carne Qualitè";
+      precoPrato = 19.90;
+   }
+   if(prato === "Peixe"){
+      total = total + 20;
+      nomePrato = "Peixe Top";
+      precoPrato = 20;
+   }
+   if(prato === "Veg"){
+      total = total + 17.90;
+      nomePrato = "Vegetariano";
+      precoPrato = 17.90;
+   }
+
+   if(bebida === "Coca"){
+      total = total + 4.9;
+      nomeBebida = "Coquinha Gelada";
+      precoBebida = 4.90;
+   }
+   if(bebida === "Agua"){
+      total = total + 2.9;
+      nomeBebida = "Água Mineral";
+      precoBebida = 2.90;
+   }
+   if(bebida === "Refresco"){
+      total = total + 3.9;
+      nomeBebida = "Refresco";
+      precoBebida = 3.90;
+   }
+
+   if(sobremesa === "Pudim"){
+      total = total+ 7.0;
+      nomeSobremesa = "Pudim";
+      precoSobremesa = 7.0;
+   }
+   if(sobremesa === "Brigadeiro"){
+      total = total+ 10.0;
+      nomeSobremesa = "Brigadeiro";
+      precoSobremesa = 10.0;
+   }
+   if(sobremesa === "Maca"){
+      total = total;
+      nomeSobremesa = "Maça";
+      precoSobremesa = 0.0;
    }
 
    const contaFormatada = total.toFixed(2);
-  
+   
 
    let teste;
 
@@ -189,7 +294,7 @@ function selecionarAgua(){
 
    teste = "Olá, gostaria de fazer o pedido: \n" +"- Prato: "+ nomePrato + "\n- Bebida: "+ nomeBebida + "\n- Sobremesa: "+nomeSobremesa + "\nTotal: R$ "+ contaFormatada+ "\nNome: "+nome+"\nEndereço: "+endereco;
    
-   alert(teste);
+  
 
    
       let UrlPronto = encodeURIComponent(teste);
@@ -199,4 +304,6 @@ function selecionarAgua(){
    
  }
  
- 
+ function reload(){
+    location.reload();
+ }
